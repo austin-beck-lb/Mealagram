@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State var profileName = ""
-    @State var profileDescription = ""
+    @Environment(\.managedObjectContext) var managedObjectContext
+
+    @State var userName = ""
+    @State var userDescription = ""
+    @State var userLocation = ""
 
     var body: some View {
         ScrollView() {
@@ -29,11 +32,11 @@ struct ProfileView: View {
                 Text("Add Image")
                     .font(.system(size: 10))
                 VStack {
-                    TextField("Full name", text: $profileName)
+                    TextField("Full name", text: $userName)
                         .font(.system(size: 10))
                         .padding(10)
                     Spacer()
-                    TextField("Description..", text: $profileDescription)
+                    TextField("Description..", text: $userDescription)
                         .font(.system(size: 10))
                         .padding(5)
                     Spacer()
@@ -65,12 +68,30 @@ struct ProfileView: View {
             })
         .navigationBarItems(leading:
             Button(action: {
+                addUser(fullName: userName, description: userDescription)
                 presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Done")
                     .foregroundColor(.primary)
             }
         )
+    }
+
+    func addUser(fullName: String, description: String) {
+        let newUser = User(context: managedObjectContext)
+
+        newUser.fullName = fullName
+        newUser.userDescription = description
+
+        saveContext()
+    }
+
+    func saveContext() {
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Error saving managed object context: \(error)")
+        }
     }
 }
 
