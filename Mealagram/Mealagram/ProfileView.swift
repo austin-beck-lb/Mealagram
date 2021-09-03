@@ -94,6 +94,7 @@ struct ProfileView: View {
                 .offset(x: 65, y: -UIScreen.main.bounds.height / 5)
                 .opacity(0.3)
         )
+    }
     func addUser(fullName: String, description: String) {
         let newUser = User(context: managedObjectContext)
 
