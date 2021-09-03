@@ -20,6 +20,7 @@ struct DiscoverView: View {
 
     @Environment(\.managedObjectContext) var managedObjectContext
     @State var isPresented = false
+    @State var isNewUser = false
 
     var body: some View {
             List {
@@ -29,8 +30,15 @@ struct DiscoverView: View {
             }
             .navigationBarTitle(Text("Users"))
             .navigationBarItems(trailing:
-                                    Button(action: { self.isPresented.toggle() }) {
+                                    Button(action: { self.isPresented.toggle()
+                                        self.isNewUser.toggle()
+                                    }) {
                                         Image(systemName: "plus")
+                                    }
+                                    .sheet(isPresented: $isNewUser) {
+                                        NavigationView {
+                                            ProfileView()
+                                        }
                                     }
             )
     }
