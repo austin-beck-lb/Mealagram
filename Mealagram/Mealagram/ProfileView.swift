@@ -49,12 +49,17 @@ struct ProfileView: View {
             TextField("Full name", text: $userName)
                 .font(.none)
                 .foregroundColor(.primary)
-                .padding(.horizontal, 10)
-
+                .padding(10)
+                .background(Color("buttonColor"))
+                .shadow(color: Color.black.opacity(0.2), radius: 8, x: 0, y: 6)
+            
             TextField("Description", text: $userDescription)
                 .font(.none)
                 .foregroundColor(.primary)
-                .padding(.horizontal, 10)
+                .padding(10)
+                .background(Color("buttonColor"))
+                .shadow(color: Color.black.opacity(0.2), radius: 8, x: 0, y: 6)
+
 
             
             AllergiesCell()
