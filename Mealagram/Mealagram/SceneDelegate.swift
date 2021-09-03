@@ -30,10 +30,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func sceneDidEnterBackground(_ scene: UIScene) {
         saveContext()
     }
-
+    
     lazy var persistentContainer: NSPersistentContainer = {
 
-        let container = NSPersistentContainer(name: "Users")
+        let container = NSPersistentContainer(name: "Mealgram")
 
         container.loadPersistentStores { _, error in
 

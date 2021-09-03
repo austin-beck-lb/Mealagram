@@ -22,6 +22,7 @@
 		BAEBE4E026E2A19C00E73DA1 /* Mealgram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4DE26E2A19C00E73DA1 /* Mealgram.xcdatamodeld */; };
 		BAEBE4E226E2A3A500E73DA1 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4E126E2A3A500E73DA1 /* UserRow.swift */; };
 		FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68B9A226E27D4700935E4B /* ProfileView.swift */; };
+		FAC5D80926E2C302008AB2D0 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC5D80826E2C302008AB2D0 /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		BAEBE4DF26E2A19C00E73DA1 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
 		BAEBE4E126E2A3A500E73DA1 /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
 		FA68B9A226E27D4700935E4B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FAC5D80826E2C302008AB2D0 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				BAEBE4B526E298C400E73DA1 /* Models */,
 				0572A5CD26E279C70099789E /* MealagramApp.swift */,
+				FAC5D80826E2C302008AB2D0 /* PersistenceController.swift */,
 				0572A5CF26E279C70099789E /* ContentView.swift */,
 				FA68B9A226E27D4700935E4B /* ProfileView.swift */,
 				053DFD9926E2A56700C65353 /* ScanQRView.swift */,
@@ -146,7 +149,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0572A5C526E279C70099789E /* Build configuration list for PBXProject "Mealagram" */;
+			buildConfigurationList = 0572A5C526E279C70099789E /* Build configuration list for PBXProject "mealagram" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -188,6 +191,7 @@
 				05851D6526E2936000A31B11 /* CustomStyles.swift in Sources */,
 				BAEBE4DB26E29E9800E73DA1 /* SceneDelegate.swift in Sources */,
 				0572A5D026E279C70099789E /* ContentView.swift in Sources */,
+				FAC5D80926E2C302008AB2D0 /* PersistenceController.swift in Sources */,
 				053DFD9A26E2A56700C65353 /* ScanQRView.swift in Sources */,
 				FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */,
 				BAEBE4BB26E299AD00E73DA1 /* Favorite.swift in Sources */,
@@ -365,7 +369,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0572A5C526E279C70099789E /* Build configuration list for PBXProject "Mealagram" */ = {
+		0572A5C526E279C70099789E /* Build configuration list for PBXProject "mealagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0572A5D726E279C80099789E /* Debug */,
