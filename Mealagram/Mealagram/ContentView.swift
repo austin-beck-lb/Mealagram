@@ -21,36 +21,73 @@ struct ContentView: View {
             Button(action: {
                 showingSheet.toggle()
             }) {
-                Text("Create Profile")
+                HStack(alignment: .center, spacing: 15) {
+                   Image(systemName: "person.crop.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 30)
+                    .foregroundColor(.primary)
+                    
+                    Text("Create Profile")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.primary)
+                }
             }
+            .foregroundColor(Color.primary)
+            .frame(width: UIScreen.main.bounds.width - 40, height: 60)
+            .background(Color("buttonColor"))
+            .cornerRadius(15)
+            .padding(5)
+            .buttonStyle(MainButtonStyle())
             .sheet(isPresented: $showingSheet) {
                 NavigationView {
                     ProfileView()
                 }
             }
-            .foregroundColor(Color.black)
-            .frame(width: 250, height: 30)
-            .border(Color.gray)
-            .padding(5)
+            
+            Text("or")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .padding(.vertical, 5)
 
-            Button(action: { }) {
-                Text("Scan QR Code")
+            Button(action: {
+                
+            }) {
+                HStack(alignment: .center, spacing: 15) {
+                   Image(systemName: "qrcode.viewfinder")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 30)
+                    .foregroundColor(.white)
+                    
+                    Text("Scan QR Code")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                }
+                
             }
-            .foregroundColor(Color.white)
-            .frame(width: 250, height: 30)
+            .foregroundColor(Color.primary)
+            .frame(width: UIScreen.main.bounds.width - 40, height: 60)
             .background(Color.blue)
-            .border(Color.gray)
+            .cornerRadius(15)
             .padding(5)
+            .buttonStyle(MainButtonStyle())
 
             Button(action: { }) {
-                Text("Already have a QR Code? Select this link to scan here!")
+                Text("Already have a QR Code? \nRecover your QR code here!")
             }
+            .multilineTextAlignment(.center)
             .font(.caption)
             .lineLimit(2)
             .foregroundColor(Color.secondary)
-            .frame(width: 170)
-            .multilineTextAlignment(.center)
-            .padding(.bottom, 10)
+            .frame(width: UIScreen.main.bounds.width - 40)
+            .padding(.bottom, 30)
+            .buttonStyle(MainButtonStyle())
+            
+            Image("powered_by")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 40)
         }
     }
 }
