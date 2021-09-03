@@ -9,8 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Mealagram")
+                .font(.largeTitle)
+                .padding()
+            Spacer()
+            Button(action: { }) {
+                Text("Create Profile")
+            }
+            .foregroundColor(Color.black)
+            .frame(width: 250, height: 30)
+            .border(Color.gray)
+            .padding(5)
+            Button(action: { }) {
+                Text("Scan QR Code")
+            }
+            .foregroundColor(Color.white)
+            .frame(width: 250, height: 30)
+            .background(Color.blue)
+            .border(Color.gray)
+            .padding(5)
+            Button(action: { }) {
+                Text("Already have a QR Code? Select this link to scan here!")
+            }
+            .font(.system(size: 10))
+            .lineLimit(2)
+            .foregroundColor(Color.black)
+            .frame(width: 170, height: 50)
+            .padding(.bottom, 10)
+        }
     }
 }
 
