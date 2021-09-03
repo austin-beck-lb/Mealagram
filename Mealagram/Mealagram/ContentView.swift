@@ -16,6 +16,7 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding()
+                .padding(.top, 30)
             Spacer()
 
             Button(action: {
