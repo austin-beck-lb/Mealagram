@@ -15,7 +15,7 @@ struct UserRow: View {
             Text(user.fullName ?? "")
                 .font(.title)
             HStack {
-                Text(user.location ?? "")
+                Text(user.userDescription ?? "")
                     .font(.caption)
             }
         }
