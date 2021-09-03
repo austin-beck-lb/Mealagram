@@ -32,12 +32,12 @@ struct ContentView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(.primary)
                 }
+                .foregroundColor(Color.primary)
+                .frame(width: UIScreen.main.bounds.width - 40, height: 60)
+                .background(Color("buttonColor"))
+                .cornerRadius(15)
+                .padding(5)
             }
-            .foregroundColor(Color.primary)
-            .frame(width: UIScreen.main.bounds.width - 40, height: 60)
-            .background(Color("buttonColor"))
-            .cornerRadius(15)
-            .padding(5)
             .buttonStyle(MainButtonStyle())
             .sheet(isPresented: $showingSheet) {
                 NavigationView {
@@ -64,25 +64,24 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                 }
-                
+                .foregroundColor(Color.primary)
+                .frame(width: UIScreen.main.bounds.width - 40, height: 60)
+                .background(Color.blue)
+                .cornerRadius(15)
+                .padding(5)
             }
-            .foregroundColor(Color.primary)
-            .frame(width: UIScreen.main.bounds.width - 40, height: 60)
-            .background(Color.blue)
-            .cornerRadius(15)
-            .padding(5)
             .buttonStyle(MainButtonStyle())
 
             Button(action: { }) {
                 Text("Already have a QR Code? \nRecover your QR code here!")
+                    .multilineTextAlignment(.center)
+                    .font(.caption)
+                    .lineLimit(2)
+                    .foregroundColor(Color.secondary)
+                    .frame(width: UIScreen.main.bounds.width - 40)
             }
-            .multilineTextAlignment(.center)
-            .font(.caption)
-            .lineLimit(2)
-            .foregroundColor(Color.secondary)
-            .frame(width: UIScreen.main.bounds.width - 40)
-            .padding(.bottom, 30)
             .buttonStyle(MainButtonStyle())
+            .padding(.bottom, 30)
             
             Image("powered_by")
                 .resizable()
