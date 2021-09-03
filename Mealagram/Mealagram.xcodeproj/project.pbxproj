@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E06D0926E2729E00A7823F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05E06D0826E2729E00A7823F /* GoogleService-Info.plist */; };
+		05E06D0A26E2729E00A7823F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05E06D0826E2729E00A7823F /* GoogleService-Info.plist */; };
+		533B9DCCC49384518C3D76D1 /* Pods_Mealagram__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEE25F5D1E53237D66E9AD0 /* Pods_Mealagram__macOS_.framework */; };
+		A552DA77A493BE6B86A8AA19 /* Pods_Mealagram__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E357C9AEB44C2C85EBC02D2 /* Pods_Mealagram__iOS_.framework */; };
 		FA11A22626E26E85009926AA /* MealagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11A21326E26E82009926AA /* MealagramApp.swift */; };
 		FA11A22726E26E85009926AA /* MealagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11A21326E26E82009926AA /* MealagramApp.swift */; };
 		FA11A22826E26E85009926AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11A21426E26E82009926AA /* ContentView.swift */; };
@@ -16,6 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05E06D0826E2729E00A7823F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E357C9AEB44C2C85EBC02D2 /* Pods_Mealagram__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mealagram__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C29FE29DA703E232A7B5CD4 /* Pods-Mealagram (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mealagram (macOS).release.xcconfig"; path = "Target Support Files/Pods-Mealagram (macOS)/Pods-Mealagram (macOS).release.xcconfig"; sourceTree = "<group>"; };
+		8A1716A6F39315CE34C71930 /* Pods-Mealagram (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mealagram (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Mealagram (iOS)/Pods-Mealagram (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		8E31085A20D1C8969AF5E57B /* Pods-Mealagram (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mealagram (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Mealagram (macOS)/Pods-Mealagram (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		DEEE25F5D1E53237D66E9AD0 /* Pods_Mealagram__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mealagram__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA11A21326E26E82009926AA /* MealagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealagramApp.swift; sourceTree = "<group>"; };
 		FA11A21426E26E82009926AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA11A21526E26E85009926AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -24,6 +34,7 @@
 		FA11A22226E26E85009926AA /* Mealagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA11A22426E26E85009926AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA11A22526E26E85009926AA /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		FDA43DDDAED9448838D05F8D /* Pods-Mealagram (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mealagram (iOS).release.xcconfig"; path = "Target Support Files/Pods-Mealagram (iOS)/Pods-Mealagram (iOS).release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A552DA77A493BE6B86A8AA19 /* Pods_Mealagram__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,12 +50,34 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533B9DCCC49384518C3D76D1 /* Pods_Mealagram__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DCB5DEC5B7C9E4B0D97F315 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E357C9AEB44C2C85EBC02D2 /* Pods_Mealagram__iOS_.framework */,
+				DEEE25F5D1E53237D66E9AD0 /* Pods_Mealagram__macOS_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60D7E0D0F32477E8945E22FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A1716A6F39315CE34C71930 /* Pods-Mealagram (iOS).debug.xcconfig */,
+				FDA43DDDAED9448838D05F8D /* Pods-Mealagram (iOS).release.xcconfig */,
+				8E31085A20D1C8969AF5E57B /* Pods-Mealagram (macOS).debug.xcconfig */,
+				7C29FE29DA703E232A7B5CD4 /* Pods-Mealagram (macOS).release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FA11A20D26E26E82009926AA = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +85,8 @@
 				FA11A21C26E26E85009926AA /* iOS */,
 				FA11A22326E26E85009926AA /* macOS */,
 				FA11A21B26E26E85009926AA /* Products */,
+				60D7E0D0F32477E8945E22FB /* Pods */,
+				4DCB5DEC5B7C9E4B0D97F315 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +96,7 @@
 				FA11A21326E26E82009926AA /* MealagramApp.swift */,
 				FA11A21426E26E82009926AA /* ContentView.swift */,
 				FA11A21526E26E85009926AA /* Assets.xcassets */,
+				05E06D0826E2729E00A7823F /* GoogleService-Info.plist */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -97,9 +134,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA11A22E26E26E85009926AA /* Build configuration list for PBXNativeTarget "Mealagram (iOS)" */;
 			buildPhases = (
+				B36A954885CDA858CB5C8ED3 /* [CP] Check Pods Manifest.lock */,
 				FA11A21626E26E85009926AA /* Sources */,
 				FA11A21726E26E85009926AA /* Frameworks */,
 				FA11A21826E26E85009926AA /* Resources */,
+				410A63498067FE04DE8DF8D8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -114,6 +153,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA11A23126E26E85009926AA /* Build configuration list for PBXNativeTarget "Mealagram (macOS)" */;
 			buildPhases = (
+				888E3843C06E057D4FE92AF4 /* [CP] Check Pods Manifest.lock */,
 				FA11A21E26E26E85009926AA /* Sources */,
 				FA11A21F26E26E85009926AA /* Frameworks */,
 				FA11A22026E26E85009926AA /* Resources */,
@@ -169,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA11A22A26E26E85009926AA /* Assets.xcassets in Resources */,
+				05E06D0926E2729E00A7823F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,10 +218,75 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA11A22B26E26E85009926AA /* Assets.xcassets in Resources */,
+				05E06D0A26E2729E00A7823F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		410A63498067FE04DE8DF8D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mealagram (iOS)/Pods-Mealagram (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mealagram (iOS)/Pods-Mealagram (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mealagram (iOS)/Pods-Mealagram (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		888E3843C06E057D4FE92AF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mealagram (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B36A954885CDA858CB5C8ED3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mealagram (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA11A21626E26E85009926AA /* Sources */ = {
@@ -317,6 +423,7 @@
 		};
 		FA11A22F26E26E85009926AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A1716A6F39315CE34C71930 /* Pods-Mealagram (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +446,7 @@
 		};
 		FA11A23026E26E85009926AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDA43DDDAED9448838D05F8D /* Pods-Mealagram (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +470,7 @@
 		};
 		FA11A23226E26E85009926AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E31085A20D1C8969AF5E57B /* Pods-Mealagram (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +495,7 @@
 		};
 		FA11A23326E26E85009926AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C29FE29DA703E232A7B5CD4 /* Pods-Mealagram (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
