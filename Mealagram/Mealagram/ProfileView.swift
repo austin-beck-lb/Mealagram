@@ -53,6 +53,7 @@ struct ProfileView: View {
                     .padding(5)
                     Spacer()
                 }
+                .background(Color.white)
                 .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 2)
                 .frame(width: 250, height: 100)
                 .cornerRadius(6)
@@ -87,6 +88,15 @@ struct ProfileView: View {
                 Text("Done")
                     .foregroundColor(.primary)
             }
+        )
+        .background(
+            Image("pizza")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: UIScreen.main.bounds.width + 200, height: UIScreen.main.bounds.height / 2)
+                .clipped()
+                .offset(x: 65, y: -UIScreen.main.bounds.height / 5)
+                .opacity(0.1)
         )
     }
 
