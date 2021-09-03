@@ -22,10 +22,10 @@ struct ContentView: View {
             
             VStack {
                 Text("Mealagram")
-                    .font(.largeTitle)
+                    .font(.system(size: 42))
                     .fontWeight(.bold)
                     .padding()
-                    .padding(.top, 30)
+                    .padding(.top, 40)
                 Spacer()
 
                 Button(action: {
@@ -45,11 +45,11 @@ struct ContentView: View {
                     .foregroundColor(Color.primary)
                     .frame(width: UIScreen.main.bounds.width - 40, height: 60)
                     .background(Color("buttonColor"))
-                    .shadow(color: Color.black.opacity(0.2), radius: 7, x: 0, y: 8)
                     .cornerRadius(15)
                     .padding(5)
                 }
                 .buttonStyle(MainButtonStyle())
+                .shadow(color: Color.black.opacity(0.2), radius: 12, x: 0, y: 6)
                 .sheet(isPresented: $showingProfileSheet) {
                     NavigationView {
                         ProfileView()
@@ -78,11 +78,11 @@ struct ContentView: View {
                     .foregroundColor(Color.primary)
                     .frame(width: UIScreen.main.bounds.width - 40, height: 60)
                     .background(Color.blue)
-                    .shadow(color: Color.black.opacity(0.2), radius: 7, x: 0, y: 8)
                     .cornerRadius(15)
                     .padding(5)
                 }
                 .buttonStyle(MainButtonStyle())
+                .shadow(color: Color.black.opacity(0.2), radius: 12, x: 0, y: 6)
                 .slideOverCard(isPresented: $showingQRSheet) {
                     VStack(alignment: .center) {
                         Text("Scan QR Code")
