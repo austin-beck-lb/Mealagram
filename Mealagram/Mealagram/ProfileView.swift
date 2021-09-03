@@ -96,7 +96,7 @@ struct ProfileView: View {
                 .frame(width: UIScreen.main.bounds.width + 200, height: UIScreen.main.bounds.height / 2)
                 .clipped()
                 .offset(x: 65, y: -UIScreen.main.bounds.height / 5)
-                .opacity(0.1)
+                .opacity(0.3)
         )
     }
 
@@ -302,6 +302,7 @@ struct FavoritesCell: View {
                     .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
                 .padding(.top, 10)
+                .padding(.leading, 50)
             }
         }
     }
