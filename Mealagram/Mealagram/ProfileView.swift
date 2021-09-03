@@ -43,16 +43,7 @@ struct ProfileView: View {
                     .stroke(Color.gray, lineWidth: 1)
                     )
             AllergiesCell()
-            VStack(alignment: .leading) {
-                Text("Favorites")
-                    .font(.system(size: 15))
-                    .padding(.leading, 30)
-                    .padding(.top, 20)
-                Divider()
-                HStack {
-                    
-                }
-            }
+            FavoritesCell()
         }
     }
 }
@@ -122,6 +113,86 @@ struct AllergiesCell: View {
                 )
             }
             .padding(.leading, 10)
+        }
+    }
+}
+
+struct FavoritesCell: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Favorites")
+                .font(.system(size: 15))
+                .padding(.leading, 30)
+                .padding(.top, 20)
+            Divider()
+            VStack {
+                HStack {
+                    Button(action: {
+                        
+                    }) {
+                        Text("American")
+                    }
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                    .cornerRadius(6)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color.gray, lineWidth: 1)
+                    )
+                    Button(action: {
+                        
+                    }) {
+                        Text("Mexican")
+                    }
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                    .cornerRadius(6)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color.gray, lineWidth: 1)
+                    )
+                    Button(action: {
+                        
+                    }) {
+                        Text("Vegan")
+                    }
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                    .cornerRadius(6)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color.gray, lineWidth: 1)
+                    )
+                }
+                .padding(.leading, 30)
+                HStack {
+                    Button(action: {
+                        
+                    }) {
+                        Text("Italian")
+                    }
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                    .cornerRadius(6)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color.gray, lineWidth: 1)
+                    )
+                    Button(action: {
+                        
+                    }) {
+                        Text("Asian")
+                    }
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
+                    .cornerRadius(6)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color.gray, lineWidth: 1)
+                    )
+                }
+                .padding(.top, 10)
+            }
         }
     }
 }
