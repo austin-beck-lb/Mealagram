@@ -60,6 +60,12 @@ struct ContentView: View {
                 showingDiscoverSheet.toggle()
             }) {
                 HStack(alignment: .center, spacing: 15) {
+                    Image(systemName: "safari")
+                     .resizable()
+                     .scaledToFit()
+                     .frame(height: 30)
+                     .foregroundColor(.primary)
+
                     Text("Discover")
                         .fontWeight(.semibold)
                         .foregroundColor(.primary)
@@ -71,6 +77,7 @@ struct ContentView: View {
                 .padding(5)
             }
             .buttonStyle(MainButtonStyle())
+            .shadow(color: Color.black.opacity(0.2), radius: 12, x: 0, y: 6)
             .sheet(isPresented: $showingDiscoverSheet) {
                 NavigationView {
                     DiscoverView()
@@ -131,7 +138,9 @@ struct ContentView: View {
                 .clipped()
                 .offset(x: 65, y: -UIScreen.main.bounds.height / 5)
         )
-        .slideOverCard(isPresented: $showingQRSheet) {
+        .slideOverCard(isPresented: $showingQRSheet, onDismiss: {
+            UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
+        }) {
             VStack(alignment: .center) {
                 Text("Scan QR Code")
                     .font(.title)

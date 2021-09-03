@@ -6,6 +6,12 @@
 //
 
 import SwiftUI
+import MapKit
+
+struct MyAnnotationItem: Identifiable {
+    let id = UUID()
+    var coordinate: CLLocationCoordinate2D
+}
 
 struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -15,62 +21,52 @@ struct ProfileView: View {
     @State var userDescription = ""
     @State var userLocation = ""
 
+    @State private var userTrackingMode: MapUserTrackingMode = .follow
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 25.7617, longitude: 80.1918), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+
     var body: some View {
-        ScrollView() {
+        ScrollView {
             VStack(alignment: .center) {
                 Button(action: {
-                            print("Round Action")
-                            }) {
-                            Image("profile")
-                                .resizable()
-                                .frame(width: 100, height: 100)
-                                .background(Color.gray)
-                                .clipShape(Circle())
-                        }
+                    print("Round Action")
+                }) {
+                    Image("profile")
+                        .resizable()
+                        .foregroundColor(Color.secondary)
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+                        .overlay(Image(systemName: "person.fill").resizable().foregroundColor(.gray).frame(width: 24, height: 24))
+                }
                 .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 2)
                 .font(.title)
                 .padding(5)
+
                 Text("Add Image")
-                    .font(.system(size: 10))
-                VStack {
-                    Button(action: {
-                        
-                    }) {
-                        TextField("Full name", text: $userName)
-                            .font(.system(size: 10))
-                            .foregroundColor(Color.black)
-                    }
-                    .padding(10)
-                    Divider()
-                    Spacer()
-                    Button(action: {
-                        
-                    }) {
-                        TextField("Description..", text: $userDescription)
-                            .font(.system(size: 10))
-                            .foregroundColor(Color.black)
-                    }
-                    .padding(5)
-                    Spacer()
-                }
-                .background(Color.white)
-                .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 2)
-                .frame(width: 250, height: 100)
-                .cornerRadius(6)
-                .overlay(RoundedRectangle(cornerRadius: 6)
-                        .stroke(Color.gray, lineWidth: 1))
-
-                AllergiesCell()
-                FavoritesCell()
-
-                Divider()
-                Image("map")
-                    .resizable()
-                    .frame(width: 200, height: 200)
-                    .padding(.top, 15)
-                    .padding(.bottom, 10)
+                    .font(.none)
+                    .foregroundColor(.primary)
             }
-        }.navigationTitle("Create Profile")
+            
+            TextField("Full name", text: $userName)
+                .font(.none)
+                .foregroundColor(.primary)
+                .padding(.horizontal, 10)
+            
+            TextField("Description..", text: $userDescription)
+                .font(.none)
+                .foregroundColor(.primary)
+                .padding(.horizontal, 10)
+
+            
+            AllergiesCell()
+            FavoritesCell()
+            
+            Map(coordinateRegion: $region, interactionModes: MapInteractionModes.zoom, showsUserLocation: true, userTrackingMode: $userTrackingMode, annotationItems: [MyAnnotationItem(coordinate: CLLocationCoordinate2D(latitude: 40.7484, longitude: 73.9857))]) { marker in
+                MapPin(coordinate: marker.coordinate)
+            }.frame(width: UIScreen.main.bounds.width - 40, height: 220, alignment: .center)
+            .cornerRadius(20)
+            
+        }.listStyle(GroupedListStyle())
+        .navigationTitle("Create Profile")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing:
             Button(action: {
@@ -85,7 +81,7 @@ struct ProfileView: View {
                 addUser(fullName: userName, description: userDescription)
                 presentationMode.wrappedValue.dismiss()
             }) {
-                Text("Done")
+                Text("Cancel")
                     .foregroundColor(.primary)
             }
         )
@@ -98,8 +94,6 @@ struct ProfileView: View {
                 .offset(x: 65, y: -UIScreen.main.bounds.height / 5)
                 .opacity(0.3)
         )
-    }
-
     func addUser(fullName: String, description: String) {
         let newUser = User(context: managedObjectContext)
 
