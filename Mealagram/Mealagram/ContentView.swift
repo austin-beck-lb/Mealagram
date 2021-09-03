@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var showingProfileSheet = false
     @State private var showingQRSheet = false
     @State private var showingDiscoverSheet = false
+    @State private var showingOrderSheet = false
+    @State var foundUserId: String = ""
 
     var body: some View {
         VStack {
@@ -60,6 +62,12 @@ struct ContentView: View {
                 showingDiscoverSheet.toggle()
             }) {
                 HStack(alignment: .center, spacing: 15) {
+                    Image(systemName: "safari")
+                     .resizable()
+                     .scaledToFit()
+                     .frame(height: 30)
+                     .foregroundColor(.primary)
+
                     Text("Discover")
                         .fontWeight(.semibold)
                         .foregroundColor(.primary)
@@ -71,6 +79,7 @@ struct ContentView: View {
                 .padding(5)
             }
             .buttonStyle(MainButtonStyle())
+            .shadow(color: Color.black.opacity(0.2), radius: 12, x: 0, y: 6)
             .sheet(isPresented: $showingDiscoverSheet) {
                 NavigationView {
                     DiscoverView()
@@ -131,7 +140,12 @@ struct ContentView: View {
                 .clipped()
                 .offset(x: 65, y: -UIScreen.main.bounds.height / 5)
         )
-        .slideOverCard(isPresented: $showingQRSheet) {
+        .slideOverCard(isPresented: $showingQRSheet, onDismiss: {
+            //guard !self.foundUserId.isEmpty else { return }
+            
+            UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
+            self.showingOrderSheet.toggle()
+        }) {
             VStack(alignment: .center) {
                 Text("Scan QR Code")
                     .font(.title)
@@ -146,11 +160,16 @@ struct ContentView: View {
                     .padding(.horizontal)
                     .offset(y: -10)
 
-                ScanQRView(dimissView: self.$showingQRSheet)
+                ScanQRView(dimissView: self.$showingQRSheet, foundUserId: $foundUserId, showingOrderSheet: self.$showingOrderSheet)
                     .frame(width: UIScreen.main.bounds.width - 150, height: UIScreen.main.bounds.height / 3, alignment: .center)
                     .cornerRadius(20)
                     .shadow(color: Color.black.opacity(0.25), radius: 10, x: 0, y: 0)
                     .padding(.top, 5)
+            }
+        }
+        .sheet(isPresented: $showingOrderSheet) {
+            NavigationView {
+                OrderView()
             }
         }
     }
