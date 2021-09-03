@@ -12,8 +12,10 @@ struct ContentView: View {
         VStack {
             Text("Mealagram")
                 .font(.largeTitle)
+                .fontWeight(.bold)
                 .padding()
             Spacer()
+
             Button(action: { }) {
                 Text("Create Profile")
             }
@@ -21,6 +23,7 @@ struct ContentView: View {
             .frame(width: 250, height: 30)
             .border(Color.gray)
             .padding(5)
+
             Button(action: { }) {
                 Text("Scan QR Code")
             }
@@ -29,13 +32,14 @@ struct ContentView: View {
             .background(Color.blue)
             .border(Color.gray)
             .padding(5)
+
             Button(action: { }) {
                 Text("Already have a QR Code? Select this link to scan here!")
             }
             .font(.system(size: 10))
             .lineLimit(2)
-            .foregroundColor(Color.black)
-            .frame(width: 170, height: 50)
+            .foregroundColor(Color.primary)
+            .frame(width: 170)
             .padding(.bottom, 10)
         }
     }
