@@ -55,6 +55,11 @@ struct ProfileView_Previews: PreviewProvider {
 }
 
 struct AllergiesCell: View {
+    @State var isNuts = false
+    @State var isDairy = false
+    @State var isShellfish = false
+    @State var isEggs = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Allergies")
@@ -64,24 +69,28 @@ struct AllergiesCell: View {
             Divider()
             HStack() {
                 Button(action: {
-                    
+                    isNuts.toggle()
                 }) {
                     Text("Nuts")
                 }
+                .foregroundColor(isNuts ? Color.white : Color.black)
                 .padding(.leading, 10)
                 .padding(.trailing, 10)
+                .background(isNuts ? Color.blue : Color.white)
                 .cornerRadius(6)
                 .overlay(
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.gray, lineWidth: 1)
                 )
                 Button(action: {
-                    
+                    isDairy.toggle()
                 }) {
                     Text("Dairy")
                 }
                 .padding(.leading, 10)
                 .padding(.trailing, 10)
+                .foregroundColor(isDairy ? Color.white : Color.black)
+                .background(isDairy ? Color.blue : Color.white)
                 .cornerRadius(6)
                 .overlay(
                     RoundedRectangle(cornerRadius: 6)
@@ -94,6 +103,8 @@ struct AllergiesCell: View {
                 }
                 .padding(.leading, 10)
                 .padding(.trailing, 10)
+                .foregroundColor(isShellfish ? Color.white : Color.black)
+                .background(isShellfish ? Color.blue : Color.white)
                 .cornerRadius(6)
                 .overlay(
                     RoundedRectangle(cornerRadius: 6)
@@ -106,6 +117,8 @@ struct AllergiesCell: View {
                 }
                 .padding(.leading, 10)
                 .padding(.trailing, 10)
+                .foregroundColor(isEggs ? Color.white : Color.black)
+                .background(isEggs ? Color.blue : Color.white)
                 .cornerRadius(6)
                 .overlay(
                     RoundedRectangle(cornerRadius: 6)
@@ -118,6 +131,12 @@ struct AllergiesCell: View {
 }
 
 struct FavoritesCell: View {
+    @State var isAmerican = false
+    @State var isMexican = false
+    @State var isVegan = false
+    @State var isItalian = false
+    @State var isAsian = false
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Favorites")
@@ -128,36 +147,42 @@ struct FavoritesCell: View {
             VStack {
                 HStack {
                     Button(action: {
-                        
+                        isAmerican.toggle()
                     }) {
                         Text("American")
                     }
                     .padding(.leading, 10)
                     .padding(.trailing, 10)
+                    .foregroundColor(isAmerican ? Color.white : Color.black)
+                    .background(isAmerican ? Color.blue : Color.white)
                     .cornerRadius(6)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
                     Button(action: {
-                        
+                        isMexican.toggle()
                     }) {
                         Text("Mexican")
                     }
                     .padding(.leading, 10)
                     .padding(.trailing, 10)
+                    .foregroundColor(isMexican ? Color.white : Color.black)
+                    .background(isMexican ? Color.blue : Color.white)
                     .cornerRadius(6)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
                     Button(action: {
-                        
+                        isVegan.toggle()
                     }) {
                         Text("Vegan")
                     }
                     .padding(.leading, 10)
                     .padding(.trailing, 10)
+                    .foregroundColor(isVegan ? Color.white : Color.black)
+                    .background(isVegan ? Color.blue : Color.white)
                     .cornerRadius(6)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
@@ -167,24 +192,28 @@ struct FavoritesCell: View {
                 .padding(.leading, 30)
                 HStack {
                     Button(action: {
-                        
+                        isItalian.toggle()
                     }) {
                         Text("Italian")
                     }
                     .padding(.leading, 10)
                     .padding(.trailing, 10)
+                    .foregroundColor(isItalian ? Color.white : Color.black)
+                    .background(isItalian ? Color.blue : Color.white)
                     .cornerRadius(6)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
                     Button(action: {
-                        
+                        isAsian.toggle()
                     }) {
                         Text("Asian")
                     }
                     .padding(.leading, 10)
                     .padding(.trailing, 10)
+                    .foregroundColor(isAsian ? Color.white : Color.black)
+                    .background(isAsian ? Color.blue : Color.white)
                     .cornerRadius(6)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
