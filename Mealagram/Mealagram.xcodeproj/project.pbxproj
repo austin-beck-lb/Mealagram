@@ -11,6 +11,7 @@
 		0572A5D026E279C70099789E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572A5CF26E279C70099789E /* ContentView.swift */; };
 		0572A5D226E279C80099789E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D126E279C80099789E /* Assets.xcassets */; };
 		0572A5D526E279C80099789E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D426E279C80099789E /* Preview Assets.xcassets */; };
+		FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68B9A226E27D4700935E4B /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		0572A5D126E279C80099789E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0572A5D426E279C80099789E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0572A5D626E279C80099789E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA68B9A226E27D4700935E4B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				0572A5CD26E279C70099789E /* MealagramApp.swift */,
 				0572A5CF26E279C70099789E /* ContentView.swift */,
+				FA68B9A226E27D4700935E4B /* ProfileView.swift */,
 				0572A5D126E279C80099789E /* Assets.xcassets */,
 				0572A5D626E279C80099789E /* Info.plist */,
 				0572A5D326E279C80099789E /* Preview Content */,
@@ -103,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0572A5C526E279C70099789E /* Build configuration list for PBXProject "Mealagram" */;
+			buildConfigurationList = 0572A5C526E279C70099789E /* Build configuration list for PBXProject "mealagram" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0572A5D026E279C70099789E /* ContentView.swift in Sources */,
+				FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */,
 				0572A5CE26E279C70099789E /* MealagramApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +313,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0572A5C526E279C70099789E /* Build configuration list for PBXProject "Mealagram" */ = {
+		0572A5C526E279C70099789E /* Build configuration list for PBXProject "mealagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0572A5D726E279C80099789E /* Debug */,
