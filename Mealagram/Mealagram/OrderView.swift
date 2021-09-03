@@ -43,8 +43,9 @@ struct OrderView: View {
                             HStack(alignment: .center, spacing: 15) {
                                 Image(item.image)
                                     .resizable()
-                                    .aspectRatio(contentMode: .fit)
+                                    .aspectRatio(contentMode: .fill)
                                     .frame(width: 65, height: 65, alignment: .center)
+                                    .cornerRadius(4)
                                     .padding(.leading)
 
                                 Text(item.name)
