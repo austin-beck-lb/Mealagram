@@ -13,6 +13,7 @@
 		0572A5D526E279C80099789E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D426E279C80099789E /* Preview Assets.xcassets */; };
 		05851D6026E28DC400A31B11 /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 05851D5F26E28DC400A31B11 /* SlideOverCard */; };
 		05851D6326E28E4600A31B11 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = 05851D6226E28E4600A31B11 /* CarBode */; };
+		05851D6526E2936000A31B11 /* CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05851D6426E2936000A31B11 /* CustomStyles.swift */; };
 		FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68B9A226E27D4700935E4B /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		0572A5D126E279C80099789E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0572A5D426E279C80099789E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0572A5D626E279C80099789E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05851D6426E2936000A31B11 /* CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyles.swift; sourceTree = "<group>"; };
 		FA68B9A226E27D4700935E4B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				0572A5CD26E279C70099789E /* MealagramApp.swift */,
 				0572A5CF26E279C70099789E /* ContentView.swift */,
 				FA68B9A226E27D4700935E4B /* ProfileView.swift */,
+				05851D6426E2936000A31B11 /* CustomStyles.swift */,
 				0572A5D126E279C80099789E /* Assets.xcassets */,
 				0572A5D626E279C80099789E /* Info.plist */,
 				0572A5D326E279C80099789E /* Preview Content */,
@@ -153,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05851D6526E2936000A31B11 /* CustomStyles.swift in Sources */,
 				0572A5D026E279C70099789E /* ContentView.swift in Sources */,
 				FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */,
 				0572A5CE26E279C70099789E /* MealagramApp.swift in Sources */,

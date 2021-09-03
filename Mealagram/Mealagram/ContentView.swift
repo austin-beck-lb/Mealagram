@@ -25,6 +25,7 @@ struct ContentView: View {
                    Image(systemName: "person.crop.circle")
                     .resizable()
                     .scaledToFit()
+                    .frame(height: 30)
                     .foregroundColor(.primary)
                     
                     Text("Create Profile")
@@ -37,6 +38,7 @@ struct ContentView: View {
             .background(Color("buttonColor"))
             .cornerRadius(15)
             .padding(5)
+            .buttonStyle(MainButtonStyle())
             .sheet(isPresented: $showingSheet) {
                 NavigationView {
                     ProfileView()
@@ -69,16 +71,18 @@ struct ContentView: View {
             .background(Color.blue)
             .cornerRadius(15)
             .padding(5)
+            .buttonStyle(MainButtonStyle())
 
             Button(action: { }) {
-                Text("Already have a QR Code? Select this link to scan here!")
+                Text("Already have a QR Code? \nRecover your QR code here!")
             }
+            .multilineTextAlignment(.center)
             .font(.caption)
             .lineLimit(2)
-            .multilineTextAlignment(.center)
             .foregroundColor(Color.secondary)
-            .frame(width: UIScreen.main.bounds.width - 40, height: 60)
-            .padding(.bottom, 50)
+            .frame(width: UIScreen.main.bounds.width - 40)
+            .padding(.bottom, 30)
+            .buttonStyle(MainButtonStyle())
             
             Image("powered_by")
                 .resizable()
