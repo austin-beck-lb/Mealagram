@@ -13,37 +13,54 @@ struct ProfileView: View {
     @State var profileDescription = ""
 
     var body: some View {
-        VStack {
-            Button(action: {
-                        print("Round Action")
-                        }) {
-                        Text("+")
-                            .frame(width: 100, height: 100)
-                            .background(Color.gray)
-                            .clipShape(Circle())
-                    }
-            .font(.title)
-            .padding(5)
-            Text("Add Image")
-                .font(.system(size: 10))
+        ScrollView() {
             VStack {
-                TextField("Full name", text: $profileName)
+                VStack(alignment: .trailing) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("Close")
+                    }
+                    .padding(.leading, 200)
+                    .font(.system(size: 12))
+                }
+                Button(action: {
+                            print("Round Action")
+                            }) {
+                            Text("+")
+                                .frame(width: 100, height: 100)
+                                .background(Color.gray)
+                                .clipShape(Circle())
+                        }
+                .font(.title)
+                .padding(5)
+                Text("Add Image")
                     .font(.system(size: 10))
-                    .padding(10)
-                Spacer()
-                TextField("Description..", text: $profileDescription)
-                    .font(.system(size: 10))
-                    .padding(5)
-                Spacer()
+                VStack {
+                    TextField("Full name", text: $profileName)
+                        .font(.system(size: 10))
+                        .padding(10)
+                    Spacer()
+                    TextField("Description..", text: $profileDescription)
+                        .font(.system(size: 10))
+                        .padding(5)
+                    Spacer()
+                }
+                .frame(width: 250, height: 100)
+                .cornerRadius(6)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 6)
+                        .stroke(Color.gray, lineWidth: 1)
+                        )
+                AllergiesCell()
+                FavoritesCell()
+                Divider()
+                Image("map")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                    .padding(.top, 15)
+                    .padding(.bottom, 10)
             }
-            .frame(width: 250, height: 100)
-            .cornerRadius(6)
-            .overlay(
-                RoundedRectangle(cornerRadius: 6)
-                    .stroke(Color.gray, lineWidth: 1)
-                    )
-            AllergiesCell()
-            FavoritesCell()
         }
     }
 }
