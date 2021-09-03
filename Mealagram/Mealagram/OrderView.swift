@@ -17,11 +17,12 @@ struct MenuItem: Identifiable {
 struct OrderView: View {
     @Environment(\.presentationMode) var presentationMode
 
-    var menu: [MenuItem] = [MenuItem(name: "Ham Sandwich", image: "Sandwich", price: "$4.99"),
-                           MenuItem(name: "Corndog", image: "Sandwich", price: "$4.99"),
-                           MenuItem(name: "Ham Sandwich", image: "Sandwich", price: "$4.99"),
-                           MenuItem(name: "Ham Sandwich", image: "Sandwich", price: "$4.99"),
-                           MenuItem(name: "Ham Sandwich", image: "Sandwich", price: "$4.99")]
+    var menu: [MenuItem] = [MenuItem(name: "Ham Sandwich", image: "ham sandwich", price: "$6.99"),
+                           MenuItem(name: "Brandon's Burrito", image: "burrito", price: "$8.99"),
+                           MenuItem(name: "Austin's Aioli Burger", image: "aoili", price: "$10.99"),
+                           MenuItem(name: "Caitlyn's Crusted Calamari", image: "calamari", price: "$15.99"),
+                           MenuItem(name: "Kung Pao Chicken", image: "kung pao", price: "$13.99"),
+                           MenuItem(name: "Falafel Sandwich", image: "falafel", price: "$3.99")]
     
     @State private var selectedMenu: MenuItem = MenuItem(name: "", image: "", price: "")
     @State private var nextView: Bool = false
@@ -45,7 +46,7 @@ struct OrderView: View {
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 65, height: 65, alignment: .center)
                                     .padding(.leading)
-                                
+
                                 Text(item.name)
                                     .font(.body)
                                     .fontWeight(.medium)
