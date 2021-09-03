@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		0572A5D026E279C70099789E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572A5CF26E279C70099789E /* ContentView.swift */; };
 		0572A5D226E279C80099789E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D126E279C80099789E /* Assets.xcassets */; };
 		0572A5D526E279C80099789E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D426E279C80099789E /* Preview Assets.xcassets */; };
+		05851D6026E28DC400A31B11 /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 05851D5F26E28DC400A31B11 /* SlideOverCard */; };
 		FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68B9A226E27D4700935E4B /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05851D6026E28DC400A31B11 /* SlideOverCard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +90,9 @@
 			dependencies = (
 			);
 			name = Mealagram;
+			packageProductDependencies = (
+				05851D5F26E28DC400A31B11 /* SlideOverCard */,
+			);
 			productName = Mealagram;
 			productReference = 0572A5CA26E279C70099789E /* Mealagram.app */;
 			productType = "com.apple.product-type.application";
@@ -106,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0572A5C526E279C70099789E /* Build configuration list for PBXProject "mealagram" */;
+			buildConfigurationList = 0572A5C526E279C70099789E /* Build configuration list for PBXProject "Mealagram" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,6 +120,9 @@
 				Base,
 			);
 			mainGroup = 0572A5C126E279C70099789E;
+			packageReferences = (
+				05851D5E26E28DC400A31B11 /* XCRemoteSwiftPackageReference "SlideOverCard" */,
+			);
 			productRefGroup = 0572A5CB26E279C70099789E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -313,7 +321,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0572A5C526E279C70099789E /* Build configuration list for PBXProject "mealagram" */ = {
+		0572A5C526E279C70099789E /* Build configuration list for PBXProject "Mealagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0572A5D726E279C80099789E /* Debug */,
@@ -332,6 +340,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		05851D5E26E28DC400A31B11 /* XCRemoteSwiftPackageReference "SlideOverCard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joogps/SlideOverCard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		05851D5F26E28DC400A31B11 /* SlideOverCard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05851D5E26E28DC400A31B11 /* XCRemoteSwiftPackageReference "SlideOverCard" */;
+			productName = SlideOverCard;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0572A5C226E279C70099789E /* Project object */;
 }
