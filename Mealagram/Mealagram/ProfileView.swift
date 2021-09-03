@@ -70,18 +70,10 @@ struct ProfileView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing:
             Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }) {
-                Text("Create")
-                    .foregroundColor(.blue)
-                    
-            })
-        .navigationBarItems(leading:
-            Button(action: {
                 addUser(fullName: userName, description: userDescription)
                 presentationMode.wrappedValue.dismiss()
             }) {
-                Text("Cancel")
+                Text("Create")
                     .foregroundColor(.primary)
             }
         )

@@ -22,25 +22,17 @@ struct DiscoverView: View {
     @State var isPresented = false
 
     var body: some View {
-        NavigationView {
             List {
                 ForEach(users, id: \.fullName) {
                     UserRow(user: $0)
                 }
             }
-//            .sheet(isPresented: $isPresented) {
-//                AddMovie { title, genre, release in
-//                    self.addMovie(title: title, genre: genre, releaseDate: release)
-//                    self.isPresented = false
-//                }
-//            }
             .navigationBarTitle(Text("Users"))
             .navigationBarItems(trailing:
                                     Button(action: { self.isPresented.toggle() }) {
                                         Image(systemName: "plus")
                                     }
             )
-        }
     }
 
     func saveContext() {
