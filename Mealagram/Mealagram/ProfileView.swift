@@ -9,8 +9,11 @@ import SwiftUI
 
 struct ProfileView: View {
     @Environment(\.presentationMode) var presentationMode
-    @State var profileName = ""
-    @State var profileDescription = ""
+    @Environment(\.managedObjectContext) var managedObjectContext
+
+    @State var userName = ""
+    @State var userDescription = ""
+    @State var userLocation = ""
 
     var body: some View {
         ScrollView() {
@@ -18,25 +21,28 @@ struct ProfileView: View {
                 Button(action: {
                             print("Round Action")
                             }) {
-                            Text("+")
+                            Image("profile")
+                                .resizable()
                                 .frame(width: 100, height: 100)
                                 .background(Color.gray)
                                 .clipShape(Circle())
                         }
+                .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 2)
                 .font(.title)
                 .padding(5)
                 Text("Add Image")
                     .font(.system(size: 10))
                 VStack {
-                    TextField("Full name", text: $profileName)
+                    TextField("Full name", text: $userName)
                         .font(.system(size: 10))
                         .padding(10)
                     Spacer()
-                    TextField("Description..", text: $profileDescription)
+                    TextField("Description..", text: $userDescription)
                         .font(.system(size: 10))
                         .padding(5)
                     Spacer()
                 }
+                .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 2)
                 .frame(width: 250, height: 100)
                 .cornerRadius(6)
                 .overlay(RoundedRectangle(cornerRadius: 6)
@@ -64,12 +70,30 @@ struct ProfileView: View {
             })
         .navigationBarItems(leading:
             Button(action: {
+                addUser(fullName: userName, description: userDescription)
                 presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Cancel")
                     .foregroundColor(.primary)
             }
         )
+    }
+
+    func addUser(fullName: String, description: String) {
+        let newUser = User(context: managedObjectContext)
+
+        newUser.fullName = fullName
+        newUser.userDescription = description
+
+        saveContext()
+    }
+
+    func saveContext() {
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Error saving managed object context: \(error)")
+        }
     }
 }
 
@@ -107,6 +131,7 @@ struct AllergiesCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.gray, lineWidth: 1)
                 )
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 Button(action: {
                     isDairy.toggle()
                 }) {
@@ -121,6 +146,7 @@ struct AllergiesCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.gray, lineWidth: 1)
                 )
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 Button(action: {
                     isShellfish.toggle()
                 }) {
@@ -135,6 +161,7 @@ struct AllergiesCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.gray, lineWidth: 1)
                 )
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 Button(action: {
                     isEggs.toggle()
                 }) {
@@ -149,8 +176,10 @@ struct AllergiesCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.gray, lineWidth: 1)
                 )
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
             }
-            .padding(.leading, 10)
+            .padding(.leading, 50)
+            .padding(.top, 10)
         }
     }
 }
@@ -185,6 +214,7 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                     Button(action: {
                         isMexican.toggle()
                     }) {
@@ -199,6 +229,7 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                     Button(action: {
                         isVegan.toggle()
                     }) {
@@ -213,8 +244,10 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
-                .padding(.leading, 30)
+                .padding(.leading, 50)
+                .padding(.top, 10)
                 HStack {
                     Button(action: {
                         isItalian.toggle()
@@ -230,6 +263,7 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                     Button(action: {
                         isAsian.toggle()
                     }) {
@@ -244,6 +278,7 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
                 .padding(.top, 10)
             }
