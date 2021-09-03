@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		053DFD9A26E2A56700C65353 /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DFD9926E2A56700C65353 /* ScanQRView.swift */; };
+		053DFD9C26E2BDCB00C65353 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DFD9B26E2BDCB00C65353 /* OrderView.swift */; };
+		053DFD9E26E2C84100C65353 /* ThankYouView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DFD9D26E2C84100C65353 /* ThankYouView.swift */; };
 		0572A5CE26E279C70099789E /* MealagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572A5CD26E279C70099789E /* MealagramApp.swift */; };
 		0572A5D026E279C70099789E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572A5CF26E279C70099789E /* ContentView.swift */; };
 		0572A5D226E279C80099789E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D126E279C80099789E /* Assets.xcassets */; };
@@ -27,6 +29,8 @@
 
 /* Begin PBXFileReference section */
 		053DFD9926E2A56700C65353 /* ScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRView.swift; sourceTree = "<group>"; };
+		053DFD9B26E2BDCB00C65353 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		053DFD9D26E2C84100C65353 /* ThankYouView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThankYouView.swift; sourceTree = "<group>"; };
 		0572A5CA26E279C70099789E /* Mealagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0572A5CD26E279C70099789E /* MealagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealagramApp.swift; sourceTree = "<group>"; };
 		0572A5CF26E279C70099789E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,9 +84,11 @@
 				BAEBE4B526E298C400E73DA1 /* Models */,
 				0572A5CD26E279C70099789E /* MealagramApp.swift */,
 				0572A5CF26E279C70099789E /* ContentView.swift */,
+				053DFD9B26E2BDCB00C65353 /* OrderView.swift */,
 				FA68B9A226E27D4700935E4B /* ProfileView.swift */,
 				053DFD9926E2A56700C65353 /* ScanQRView.swift */,
 				05851D6426E2936000A31B11 /* CustomStyles.swift */,
+				053DFD9D26E2C84100C65353 /* ThankYouView.swift */,
 				BAEBE4DA26E29E9800E73DA1 /* SceneDelegate.swift */,
 				BAEBE4DC26E2A00700E73DA1 /* DiscoverView.swift */,
 				BAEBE4E126E2A3A500E73DA1 /* UserRow.swift */,
@@ -197,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05851D6526E2936000A31B11 /* CustomStyles.swift in Sources */,
+				053DFD9C26E2BDCB00C65353 /* OrderView.swift in Sources */,
 				BAEBE4BE26E29A9D00E73DA1 /* UITextField+Extensions.swift in Sources */,
 				BAEBE4DB26E29E9800E73DA1 /* SceneDelegate.swift in Sources */,
 				0572A5D026E279C70099789E /* ContentView.swift in Sources */,
@@ -204,6 +211,7 @@
 				FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */,
 				BAEBE4BB26E299AD00E73DA1 /* Favorite.swift in Sources */,
 				BAEBE4E026E2A19C00E73DA1 /* Mealgram.xcdatamodeld in Sources */,
+				053DFD9E26E2C84100C65353 /* ThankYouView.swift in Sources */,
 				BAEBE4DD26E2A00700E73DA1 /* DiscoverView.swift in Sources */,
 				BAEBE4B926E2995D00E73DA1 /* Allergy.swift in Sources */,
 				BAEBE4E226E2A3A500E73DA1 /* UserRow.swift in Sources */,

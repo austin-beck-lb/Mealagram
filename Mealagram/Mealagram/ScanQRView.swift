@@ -10,6 +10,8 @@ import CarBode
 
 struct ScanQRView: View {
     @Binding var dimissView: Bool
+    @Binding var foundUserId: String
+    @Binding var showingOrderSheet: Bool
     @State var torchIsOn = false
     @State var foundUser = false
 
@@ -20,7 +22,12 @@ struct ScanQRView: View {
                 CBScanner(supportBarcode: .constant([.qr, .code128]), torchLightIsOn: self.$torchIsOn, scanInterval: .constant(0.5)) {
                     if self.foundUser == false {
                         UINotificationFeedbackGenerator().notificationOccurred(.success)
+                        self.foundUserId = $0.value
                         self.foundUser = true
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                            self.showingOrderSheet.toggle()
+                        }
                         //print("BarCodeType =",$0.type.rawValue, "Value =",$0.value)
                         
                         print("have received incoming link!: \(String(describing: $0.value))")

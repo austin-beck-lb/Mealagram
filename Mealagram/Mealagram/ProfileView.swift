@@ -65,7 +65,7 @@ struct ProfileView: View {
             }.frame(width: UIScreen.main.bounds.width - 40, height: 220, alignment: .center)
             .cornerRadius(20)
             
-        }.listStyle(GroupedListStyle())
+        }
         .navigationTitle("Create Profile")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing:
@@ -85,18 +85,6 @@ struct ProfileView: View {
                     .foregroundColor(.primary)
             }
         )
-        
-        ScrollView() {
-            VStack(alignment: .center) {
-                
-
-
-
-  
-
-
-            }
-        }
     }
 
     func addUser(fullName: String, description: String) {
