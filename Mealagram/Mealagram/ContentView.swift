@@ -32,15 +32,16 @@ struct ContentView: View {
                         .foregroundColor(.primary)
                 }
             }
+            .foregroundColor(Color.primary)
+            .frame(width: UIScreen.main.bounds.width - 40, height: 60)
+            .background(Color("buttonColor"))
+            .cornerRadius(15)
+            .padding(5)
             .sheet(isPresented: $showingSheet) {
                 NavigationView {
                     ProfileView()
                 }
             }
-            .foregroundColor(Color.black)
-            .frame(width: 250, height: 30)
-            .border(Color.gray)
-            .padding(5)
             
             Text("or")
                 .font(.caption)
@@ -54,11 +55,11 @@ struct ContentView: View {
                    Image(systemName: "qrcode.viewfinder")
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 34)
+                    .frame(height: 30)
                     .foregroundColor(.white)
                     
                     Text("Scan QR Code")
-                        .fontWeight(.semibold)
+                        .fontWeight(.bold)
                         .foregroundColor(.white)
                 }
                 
@@ -66,7 +67,7 @@ struct ContentView: View {
             .foregroundColor(Color.primary)
             .frame(width: UIScreen.main.bounds.width - 40, height: 60)
             .background(Color.blue)
-            .cornerRadius(10)
+            .cornerRadius(15)
             .padding(5)
 
             Button(action: { }) {
