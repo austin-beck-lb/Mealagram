@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053DFD9A26E2A56700C65353 /* ScanQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DFD9926E2A56700C65353 /* ScanQRView.swift */; };
 		0572A5CE26E279C70099789E /* MealagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572A5CD26E279C70099789E /* MealagramApp.swift */; };
 		0572A5D026E279C70099789E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572A5CF26E279C70099789E /* ContentView.swift */; };
 		0572A5D226E279C80099789E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D126E279C80099789E /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053DFD9926E2A56700C65353 /* ScanQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRView.swift; sourceTree = "<group>"; };
 		0572A5CA26E279C70099789E /* Mealagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0572A5CD26E279C70099789E /* MealagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealagramApp.swift; sourceTree = "<group>"; };
 		0572A5CF26E279C70099789E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				0572A5CD26E279C70099789E /* MealagramApp.swift */,
 				0572A5CF26E279C70099789E /* ContentView.swift */,
 				FA68B9A226E27D4700935E4B /* ProfileView.swift */,
+				053DFD9926E2A56700C65353 /* ScanQRView.swift */,
 				05851D6426E2936000A31B11 /* CustomStyles.swift */,
 				0572A5D126E279C80099789E /* Assets.xcassets */,
 				0572A5D626E279C80099789E /* Info.plist */,
@@ -158,6 +161,7 @@
 			files = (
 				05851D6526E2936000A31B11 /* CustomStyles.swift in Sources */,
 				0572A5D026E279C70099789E /* ContentView.swift in Sources */,
+				053DFD9A26E2A56700C65353 /* ScanQRView.swift in Sources */,
 				FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */,
 				0572A5CE26E279C70099789E /* MealagramApp.swift in Sources */,
 			);
