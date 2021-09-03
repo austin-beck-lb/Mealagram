@@ -12,6 +12,7 @@
 		0572A5D226E279C80099789E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D126E279C80099789E /* Assets.xcassets */; };
 		0572A5D526E279C80099789E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D426E279C80099789E /* Preview Assets.xcassets */; };
 		05851D6026E28DC400A31B11 /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 05851D5F26E28DC400A31B11 /* SlideOverCard */; };
+		05851D6326E28E4600A31B11 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = 05851D6226E28E4600A31B11 /* CarBode */; };
 		FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68B9A226E27D4700935E4B /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05851D6026E28DC400A31B11 /* SlideOverCard in Frameworks */,
+				05851D6326E28E4600A31B11 /* CarBode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,7 @@
 			name = Mealagram;
 			packageProductDependencies = (
 				05851D5F26E28DC400A31B11 /* SlideOverCard */,
+				05851D6226E28E4600A31B11 /* CarBode */,
 			);
 			productName = Mealagram;
 			productReference = 0572A5CA26E279C70099789E /* Mealagram.app */;
@@ -122,6 +125,7 @@
 			mainGroup = 0572A5C126E279C70099789E;
 			packageReferences = (
 				05851D5E26E28DC400A31B11 /* XCRemoteSwiftPackageReference "SlideOverCard" */,
+				05851D6126E28E4600A31B11 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */,
 			);
 			productRefGroup = 0572A5CB26E279C70099789E /* Products */;
 			projectDirPath = "";
@@ -350,6 +354,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		05851D6126E28E4600A31B11 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/heart/CarBode-Barcode-Scanner-For-SwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -357,6 +369,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 05851D5E26E28DC400A31B11 /* XCRemoteSwiftPackageReference "SlideOverCard" */;
 			productName = SlideOverCard;
+		};
+		05851D6226E28E4600A31B11 /* CarBode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 05851D6126E28E4600A31B11 /* XCRemoteSwiftPackageReference "CarBode-Barcode-Scanner-For-SwiftUI" */;
+			productName = CarBode;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
