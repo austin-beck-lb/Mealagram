@@ -33,13 +33,24 @@ struct ProfileView: View {
                 Text("Add Image")
                     .font(.system(size: 10))
                 VStack {
-                    TextField("Full name", text: $userName)
-                        .font(.system(size: 10))
-                        .padding(10)
+                    Button(action: {
+                        
+                    }) {
+                        TextField("Full name", text: $userName)
+                            .font(.system(size: 10))
+                            .foregroundColor(Color.black)
+                    }
+                    .padding(10)
+                    Divider()
                     Spacer()
-                    TextField("Description..", text: $userDescription)
-                        .font(.system(size: 10))
-                        .padding(5)
+                    Button(action: {
+                        
+                    }) {
+                        TextField("Description..", text: $userDescription)
+                            .font(.system(size: 10))
+                            .foregroundColor(Color.black)
+                    }
+                    .padding(5)
                     Spacer()
                 }
                 .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 2)
@@ -246,7 +257,7 @@ struct FavoritesCell: View {
                     )
                     .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
-                .padding(.leading, 50)
+                .padding(.leading, 60)
                 .padding(.top, 10)
                 HStack {
                     Button(action: {
