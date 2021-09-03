@@ -50,7 +50,7 @@ struct ProfileView: View {
                 .font(.none)
                 .foregroundColor(.primary)
                 .padding(.horizontal, 10)
-            
+
             TextField("Description", text: $userDescription)
                 .font(.none)
                 .foregroundColor(.primary)
@@ -120,8 +120,9 @@ struct AllergiesCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Allergies")
-                .font(.system(size: 15))
-                .padding(.leading, 30)
+                .font(.system(size: 20))
+                .fontWeight(.bold)
+                .padding(.leading, 5)
                 .padding(.top, 10)
             Divider()
             HStack() {
@@ -202,8 +203,9 @@ struct FavoritesCell: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Favorites")
-                .font(.system(size: 15))
-                .padding(.leading, 30)
+                .font(.system(size: 20))
+                .fontWeight(.bold)
+                .padding(.leading, 5)
                 .padding(.top, 20)
             Divider()
             VStack {
