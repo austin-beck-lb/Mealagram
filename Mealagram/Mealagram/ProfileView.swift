@@ -51,7 +51,7 @@ struct ProfileView: View {
                 .foregroundColor(.primary)
                 .padding(.horizontal, 10)
             
-            TextField("Description..", text: $userDescription)
+            TextField("Description", text: $userDescription)
                 .font(.none)
                 .foregroundColor(.primary)
                 .padding(.horizontal, 10)
