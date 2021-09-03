@@ -17,7 +17,6 @@
 		05851D6526E2936000A31B11 /* CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05851D6426E2936000A31B11 /* CustomStyles.swift */; };
 		BAEBE4B926E2995D00E73DA1 /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4B826E2995D00E73DA1 /* Allergy.swift */; };
 		BAEBE4BB26E299AD00E73DA1 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4BA26E299AD00E73DA1 /* Favorite.swift */; };
-		BAEBE4BE26E29A9D00E73DA1 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4BD26E29A9D00E73DA1 /* UITextField+Extensions.swift */; };
 		BAEBE4DB26E29E9800E73DA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4DA26E29E9800E73DA1 /* SceneDelegate.swift */; };
 		BAEBE4DD26E2A00700E73DA1 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4DC26E2A00700E73DA1 /* DiscoverView.swift */; };
 		BAEBE4E026E2A19C00E73DA1 /* Mealgram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4DE26E2A19C00E73DA1 /* Mealgram.xcdatamodeld */; };
@@ -36,7 +35,6 @@
 		05851D6426E2936000A31B11 /* CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyles.swift; sourceTree = "<group>"; };
 		BAEBE4B826E2995D00E73DA1 /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
 		BAEBE4BA26E299AD00E73DA1 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
-		BAEBE4BD26E29A9D00E73DA1 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		BAEBE4DA26E29E9800E73DA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BAEBE4DC26E2A00700E73DA1 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 		BAEBE4DF26E2A19C00E73DA1 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 		0572A5CC26E279C70099789E /* Mealagram */ = {
 			isa = PBXGroup;
 			children = (
-				BAEBE4BC26E29A8300E73DA1 /* Extensions */,
 				BAEBE4B526E298C400E73DA1 /* Models */,
 				0572A5CD26E279C70099789E /* MealagramApp.swift */,
 				0572A5CF26E279C70099789E /* ContentView.swift */,
@@ -109,14 +106,6 @@
 				BAEBE4BA26E299AD00E73DA1 /* Favorite.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		BAEBE4BC26E29A8300E73DA1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BAEBE4BD26E29A9D00E73DA1 /* UITextField+Extensions.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +186,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				05851D6526E2936000A31B11 /* CustomStyles.swift in Sources */,
-				BAEBE4BE26E29A9D00E73DA1 /* UITextField+Extensions.swift in Sources */,
 				BAEBE4DB26E29E9800E73DA1 /* SceneDelegate.swift in Sources */,
 				0572A5D026E279C70099789E /* ContentView.swift in Sources */,
 				053DFD9A26E2A56700C65353 /* ScanQRView.swift in Sources */,
