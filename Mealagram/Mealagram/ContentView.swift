@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingSheet = false
+
     var body: some View {
         VStack {
             Text("Mealagram")
                 .font(.largeTitle)
                 .padding()
             Spacer()
-            Button(action: { }) {
+            Button(action: {
+                showingSheet.toggle()
+            }) {
                 Text("Create Profile")
             }
+            .sheet(isPresented: $showingSheet) {
+                        ProfileView()
+                    }
             .foregroundColor(Color.black)
             .frame(width: 250, height: 30)
             .border(Color.gray)
