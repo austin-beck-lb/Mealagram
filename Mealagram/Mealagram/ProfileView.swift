@@ -122,7 +122,7 @@ struct AllergiesCell: View {
                         .stroke(Color.gray, lineWidth: 1)
                 )
                 Button(action: {
-                    
+                    isShellfish.toggle()
                 }) {
                     Text("Shellfish")
                 }
@@ -136,7 +136,7 @@ struct AllergiesCell: View {
                         .stroke(Color.gray, lineWidth: 1)
                 )
                 Button(action: {
-                    
+                    isEggs.toggle()
                 }) {
                     Text("Eggs")
                 }
