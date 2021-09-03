@@ -24,8 +24,8 @@ struct ContentView: View {
                 Text("Create Profile")
             }
             .sheet(isPresented: $showingSheet) {
-                        ProfileView()
-                    }
+                ProfileView()
+            }
             .foregroundColor(Color.black)
             .frame(width: 250, height: 30)
             .border(Color.gray)
