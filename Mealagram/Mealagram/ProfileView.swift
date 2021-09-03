@@ -85,8 +85,16 @@ struct ProfileView: View {
                     .foregroundColor(.primary)
             }
         )
+        .background(
+            Image("pizza")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: UIScreen.main.bounds.width + 200, height: UIScreen.main.bounds.height / 2)
+                .clipped()
+                .offset(x: 65, y: -UIScreen.main.bounds.height / 5)
+                .opacity(0.3)
+        )
     }
-
     func addUser(fullName: String, description: String) {
         let newUser = User(context: managedObjectContext)
 
@@ -254,7 +262,7 @@ struct FavoritesCell: View {
                     )
                     .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
-                .padding(.leading, 50)
+                .padding(.leading, 60)
                 .padding(.top, 10)
                 HStack {
                     Button(action: {
@@ -289,6 +297,7 @@ struct FavoritesCell: View {
                     .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
                 .padding(.top, 10)
+                .padding(.leading, 50)
             }
         }
     }
