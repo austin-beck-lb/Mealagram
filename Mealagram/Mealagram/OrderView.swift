@@ -18,7 +18,7 @@ struct OrderView: View {
     @Environment(\.presentationMode) var presentationMode
 
     var menu: [MenuItem] = [MenuItem(name: "Ham Sandwich", image: "Sandwich", price: "$4.99"),
-                           MenuItem(name: "Ham Sandwich", image: "Sandwich", price: "$4.99"),
+                           MenuItem(name: "Corndog", image: "Sandwich", price: "$4.99"),
                            MenuItem(name: "Ham Sandwich", image: "Sandwich", price: "$4.99"),
                            MenuItem(name: "Ham Sandwich", image: "Sandwich", price: "$4.99"),
                            MenuItem(name: "Ham Sandwich", image: "Sandwich", price: "$4.99")]
