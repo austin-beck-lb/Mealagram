@@ -25,8 +25,7 @@ struct ScanQRView: View {
                         
                         print("have received incoming link!: \(String(describing: $0.value))")
                     }
-                }.frame(minWidth: 0, maxWidth: .infinity)
-                .frame(minHeight: 0, maxHeight: .infinity)
+                }
                 .foregroundColor(Color("bgColor"))
                 
                 HStack {
