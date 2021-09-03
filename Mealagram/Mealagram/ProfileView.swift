@@ -14,16 +14,7 @@ struct ProfileView: View {
 
     var body: some View {
         ScrollView() {
-            VStack {
-                VStack(alignment: .trailing) {
-                    Button(action: {
-                        presentationMode.wrappedValue.dismiss()
-                    }) {
-                        Text("Close")
-                    }
-                    .padding(.leading, 200)
-                    .font(.system(size: 12))
-                }
+            VStack(alignment: .center) {
                 Button(action: {
                             print("Round Action")
                             }) {
@@ -48,12 +39,12 @@ struct ProfileView: View {
                 }
                 .frame(width: 250, height: 100)
                 .cornerRadius(6)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 6)
-                        .stroke(Color.gray, lineWidth: 1)
-                        )
+                .overlay(RoundedRectangle(cornerRadius: 6)
+                        .stroke(Color.gray, lineWidth: 1))
+
                 AllergiesCell()
                 FavoritesCell()
+
                 Divider()
                 Image("map")
                     .resizable()
@@ -61,7 +52,24 @@ struct ProfileView: View {
                     .padding(.top, 15)
                     .padding(.bottom, 10)
             }
-        }
+        }.navigationTitle("Create Profile")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(trailing:
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Create")
+                    .foregroundColor(.blue)
+                    
+            })
+        .navigationBarItems(leading:
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Done")
+                    .foregroundColor(.primary)
+            }
+        )
     }
 }
 

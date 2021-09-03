@@ -24,7 +24,9 @@ struct ContentView: View {
                 Text("Create Profile")
             }
             .sheet(isPresented: $showingSheet) {
-                ProfileView()
+                NavigationView {
+                    ProfileView()
+                }
             }
             .foregroundColor(Color.black)
             .frame(width: 250, height: 30)
@@ -43,10 +45,11 @@ struct ContentView: View {
             Button(action: { }) {
                 Text("Already have a QR Code? Select this link to scan here!")
             }
-            .font(.system(size: 10))
+            .font(.caption)
             .lineLimit(2)
-            .foregroundColor(Color.primary)
+            .foregroundColor(Color.secondary)
             .frame(width: 170)
+            .multilineTextAlignment(.center)
             .padding(.bottom, 10)
         }
     }
