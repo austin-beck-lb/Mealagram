@@ -3,26 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05E06D1826E2791F00A7823F /* MealagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E06D1726E2791F00A7823F /* MealagramApp.swift */; };
-		05E06D1A26E2791F00A7823F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E06D1926E2791F00A7823F /* ContentView.swift */; };
-		05E06D1C26E2792100A7823F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E06D1B26E2792100A7823F /* Assets.xcassets */; };
-		05E06D1F26E2792100A7823F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E06D1E26E2792100A7823F /* Preview Assets.xcassets */; };
+		0572A5CE26E279C70099789E /* MealagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572A5CD26E279C70099789E /* MealagramApp.swift */; };
+		0572A5D026E279C70099789E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572A5CF26E279C70099789E /* ContentView.swift */; };
+		0572A5D226E279C80099789E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D126E279C80099789E /* Assets.xcassets */; };
+		0572A5D526E279C80099789E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0572A5D426E279C80099789E /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		05E06D1426E2791F00A7823F /* Mealagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		05E06D1726E2791F00A7823F /* MealagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealagramApp.swift; sourceTree = "<group>"; };
-		05E06D1926E2791F00A7823F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		05E06D1B26E2792100A7823F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		05E06D1E26E2792100A7823F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0572A5CA26E279C70099789E /* Mealagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mealagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0572A5CD26E279C70099789E /* MealagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealagramApp.swift; sourceTree = "<group>"; };
+		0572A5CF26E279C70099789E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0572A5D126E279C80099789E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0572A5D426E279C80099789E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0572A5D626E279C80099789E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		05E06D1126E2791F00A7823F /* Frameworks */ = {
+		0572A5C726E279C70099789E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +33,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05E06D0B26E2791F00A7823F = {
+		0572A5C126E279C70099789E = {
 			isa = PBXGroup;
 			children = (
-				05E06D1626E2791F00A7823F /* Mealagram */,
-				05E06D1526E2791F00A7823F /* Products */,
+				0572A5CC26E279C70099789E /* Mealagram */,
+				0572A5CB26E279C70099789E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		05E06D1526E2791F00A7823F /* Products */ = {
+		0572A5CB26E279C70099789E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				05E06D1426E2791F00A7823F /* Mealagram.app */,
+				0572A5CA26E279C70099789E /* Mealagram.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		05E06D1626E2791F00A7823F /* Mealagram */ = {
+		0572A5CC26E279C70099789E /* Mealagram */ = {
 			isa = PBXGroup;
 			children = (
-				05E06D1726E2791F00A7823F /* MealagramApp.swift */,
-				05E06D1926E2791F00A7823F /* ContentView.swift */,
-				05E06D1B26E2792100A7823F /* Assets.xcassets */,
-				05E06D1D26E2792100A7823F /* Preview Content */,
+				0572A5CD26E279C70099789E /* MealagramApp.swift */,
+				0572A5CF26E279C70099789E /* ContentView.swift */,
+				0572A5D126E279C80099789E /* Assets.xcassets */,
+				0572A5D626E279C80099789E /* Info.plist */,
+				0572A5D326E279C80099789E /* Preview Content */,
 			);
 			path = Mealagram;
 			sourceTree = "<group>";
 		};
-		05E06D1D26E2792100A7823F /* Preview Content */ = {
+		0572A5D326E279C80099789E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				05E06D1E26E2792100A7823F /* Preview Assets.xcassets */,
+				0572A5D426E279C80099789E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,13 +72,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		05E06D1326E2791F00A7823F /* Mealagram */ = {
+		0572A5C926E279C70099789E /* Mealagram */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 05E06D2226E2792100A7823F /* Build configuration list for PBXNativeTarget "Mealagram" */;
+			buildConfigurationList = 0572A5D926E279C80099789E /* Build configuration list for PBXNativeTarget "Mealagram" */;
 			buildPhases = (
-				05E06D1026E2791F00A7823F /* Sources */,
-				05E06D1126E2791F00A7823F /* Frameworks */,
-				05E06D1226E2791F00A7823F /* Resources */,
+				0572A5C626E279C70099789E /* Sources */,
+				0572A5C726E279C70099789E /* Frameworks */,
+				0572A5C826E279C70099789E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,68 +86,67 @@
 			);
 			name = Mealagram;
 			productName = Mealagram;
-			productReference = 05E06D1426E2791F00A7823F /* Mealagram.app */;
+			productReference = 0572A5CA26E279C70099789E /* Mealagram.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		05E06D0C26E2791F00A7823F /* Project object */ = {
+		0572A5C226E279C70099789E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					05E06D1326E2791F00A7823F = {
-						CreatedOnToolsVersion = 13.0;
+					0572A5C926E279C70099789E = {
+						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = 05E06D0F26E2791F00A7823F /* Build configuration list for PBXProject "Mealagram" */;
-			compatibilityVersion = "Xcode 13.0";
+			buildConfigurationList = 0572A5C526E279C70099789E /* Build configuration list for PBXProject "Mealagram" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 05E06D0B26E2791F00A7823F;
-			productRefGroup = 05E06D1526E2791F00A7823F /* Products */;
+			mainGroup = 0572A5C126E279C70099789E;
+			productRefGroup = 0572A5CB26E279C70099789E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				05E06D1326E2791F00A7823F /* Mealagram */,
+				0572A5C926E279C70099789E /* Mealagram */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		05E06D1226E2791F00A7823F /* Resources */ = {
+		0572A5C826E279C70099789E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E06D1F26E2792100A7823F /* Preview Assets.xcassets in Resources */,
-				05E06D1C26E2792100A7823F /* Assets.xcassets in Resources */,
+				0572A5D526E279C80099789E /* Preview Assets.xcassets in Resources */,
+				0572A5D226E279C80099789E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		05E06D1026E2791F00A7823F /* Sources */ = {
+		0572A5C626E279C70099789E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05E06D1A26E2791F00A7823F /* ContentView.swift in Sources */,
-				05E06D1826E2791F00A7823F /* MealagramApp.swift in Sources */,
+				0572A5D026E279C70099789E /* ContentView.swift in Sources */,
+				0572A5CE26E279C70099789E /* MealagramApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		05E06D2026E2792100A7823F /* Debug */ = {
+		0572A5D726E279C80099789E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -196,7 +197,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -206,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		05E06D2126E2792100A7823F /* Release */ = {
+		0572A5D826E279C80099789E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -251,7 +252,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -261,61 +262,45 @@
 			};
 			name = Release;
 		};
-		05E06D2326E2792100A7823F /* Debug */ = {
+		0572A5DA26E279C80099789E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mealagram/Preview Content\"";
 				DEVELOPMENT_TEAM = GA572ZF2XM;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = Mealagram/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lunchbox.Mealagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		05E06D2426E2792100A7823F /* Release */ = {
+		0572A5DB26E279C80099789E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Mealagram/Preview Content\"";
 				DEVELOPMENT_TEAM = GA572ZF2XM;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = Mealagram/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lunchbox.Mealagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -324,25 +309,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		05E06D0F26E2791F00A7823F /* Build configuration list for PBXProject "Mealagram" */ = {
+		0572A5C526E279C70099789E /* Build configuration list for PBXProject "Mealagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05E06D2026E2792100A7823F /* Debug */,
-				05E06D2126E2792100A7823F /* Release */,
+				0572A5D726E279C80099789E /* Debug */,
+				0572A5D826E279C80099789E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		05E06D2226E2792100A7823F /* Build configuration list for PBXNativeTarget "Mealagram" */ = {
+		0572A5D926E279C80099789E /* Build configuration list for PBXNativeTarget "Mealagram" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				05E06D2326E2792100A7823F /* Debug */,
-				05E06D2426E2792100A7823F /* Release */,
+				0572A5DA26E279C80099789E /* Debug */,
+				0572A5DB26E279C80099789E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 05E06D0C26E2791F00A7823F /* Project object */;
+	rootObject = 0572A5C226E279C70099789E /* Project object */;
 }
