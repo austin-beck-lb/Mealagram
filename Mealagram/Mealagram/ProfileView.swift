@@ -27,6 +27,7 @@ struct ProfileView: View {
                                 .background(Color.gray)
                                 .clipShape(Circle())
                         }
+                .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 2)
                 .font(.title)
                 .padding(5)
                 Text("Add Image")
@@ -41,6 +42,7 @@ struct ProfileView: View {
                         .padding(5)
                     Spacer()
                 }
+                .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 2)
                 .frame(width: 250, height: 100)
                 .cornerRadius(6)
                 .overlay(RoundedRectangle(cornerRadius: 6)
@@ -129,6 +131,7 @@ struct AllergiesCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.gray, lineWidth: 1)
                 )
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 Button(action: {
                     isDairy.toggle()
                 }) {
@@ -143,6 +146,7 @@ struct AllergiesCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.gray, lineWidth: 1)
                 )
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 Button(action: {
                     isShellfish.toggle()
                 }) {
@@ -157,6 +161,7 @@ struct AllergiesCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.gray, lineWidth: 1)
                 )
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 Button(action: {
                     isEggs.toggle()
                 }) {
@@ -171,8 +176,10 @@ struct AllergiesCell: View {
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.gray, lineWidth: 1)
                 )
+                .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
             }
-            .padding(.leading, 10)
+            .padding(.leading, 50)
+            .padding(.top, 10)
         }
     }
 }
@@ -207,6 +214,7 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                     Button(action: {
                         isMexican.toggle()
                     }) {
@@ -221,6 +229,7 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                     Button(action: {
                         isVegan.toggle()
                     }) {
@@ -235,8 +244,10 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
-                .padding(.leading, 30)
+                .padding(.leading, 50)
+                .padding(.top, 10)
                 HStack {
                     Button(action: {
                         isItalian.toggle()
@@ -252,6 +263,7 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                     Button(action: {
                         isAsian.toggle()
                     }) {
@@ -266,6 +278,7 @@ struct FavoritesCell: View {
                         RoundedRectangle(cornerRadius: 6)
                             .stroke(Color.gray, lineWidth: 1)
                     )
+                    .shadow(color: Color.black.opacity(0.2), radius: 3, x: 0, y: 2)
                 }
                 .padding(.top, 10)
             }
