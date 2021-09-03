@@ -9,6 +9,8 @@ import SwiftUI
 import SlideOverCard
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+
     @State private var showingProfileSheet = false
     @State private var showingQRSheet = false
     @State private var showingDiscoverSheet = false
@@ -49,7 +51,12 @@ struct ContentView: View {
             .shadow(color: Color.black.opacity(0.2), radius: 12, x: 0, y: 6)
             .sheet(isPresented: $showingProfileSheet) {
                 NavigationView {
-                    ProfileView()
+                    ProfileView { fullName, userDescription in
+                        
+                        self.addUser(fullName: fullName, description: userDescription)
+                        self.showingProfileSheet = false
+
+                    }
                 }
             }
 
@@ -152,6 +159,26 @@ struct ContentView: View {
                     .shadow(color: Color.black.opacity(0.25), radius: 10, x: 0, y: 0)
                     .padding(.top, 5)
             }
+        }
+    }
+
+
+    // MARK: CORE DATA
+
+    func addUser(fullName: String, description: String) {
+        let newUser = User(context: managedObjectContext)
+
+        newUser.fullName = fullName
+        newUser.userDescription = description
+
+        saveContext()
+    }
+
+    func saveContext() {
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Error saving managed object context: \(error)")
         }
     }
 }

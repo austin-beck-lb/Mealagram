@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ProfileView: View {
+    static let DefaultName = "Ham"
+    static let DefaultDescription = "Potato"
+
     @Environment(\.presentationMode) var presentationMode
-    @Environment(\.managedObjectContext) var managedObjectContext
 
     @State var userName = ""
     @State var userDescription = ""
     @State var userLocation = ""
+    let onComplete: (String, String) -> Void
 
     var body: some View {
         ScrollView() {
@@ -68,7 +71,7 @@ struct ProfileView: View {
             })
         .navigationBarItems(leading:
             Button(action: {
-                addUser(fullName: userName, description: userDescription)
+                addUserAction()
                 presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Done")
@@ -77,27 +80,11 @@ struct ProfileView: View {
         )
     }
 
-    func addUser(fullName: String, description: String) {
-        let newUser = User(context: managedObjectContext)
-
-        newUser.fullName = fullName
-        newUser.userDescription = description
-
-        saveContext()
-    }
-
-    func saveContext() {
-        do {
-            try managedObjectContext.save()
-        } catch {
-            print("Error saving managed object context: \(error)")
-        }
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
+    private func addUserAction() {
+        onComplete(
+            userName.isEmpty ? ProfileView.DefaultName : userName,
+            userDescription.isEmpty ? ProfileView.DefaultDescription : userDescription
+        )
     }
 }
 

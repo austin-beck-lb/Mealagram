@@ -31,12 +31,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         saveContext()
     }
 
+    // MARK: - Core Data stack
+
     lazy var persistentContainer: NSPersistentContainer = {
-
-        let container = NSPersistentContainer(name: "Users")
-
+        let container = NSPersistentContainer(name: "MealagramApp")
         container.loadPersistentStores { _, error in
-
             if let error = error as NSError? {
                 // You should add your own error handling code here.
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -44,18 +43,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
         return container
     }()
+
     
 
+    // MARK: - Core Data Saving support
+
     func saveContext() {
-        // 1
         let context = persistentContainer.viewContext
-        // 2
+
         if context.hasChanges {
             do {
-                // 3
                 try context.save()
             } catch {
-                // 4
                 // The context couldn't be saved.
                 // You should add your own error handling here.
                 let nserror = error as NSError
