@@ -21,7 +21,16 @@ struct ContentView: View {
             Button(action: {
                 showingSheet.toggle()
             }) {
-                Text("Create Profile")
+                HStack(alignment: .center, spacing: 15) {
+                   Image(systemName: "person.crop.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundColor(.primary)
+                    
+                    Text("Create Profile")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.primary)
+                }
             }
             .sheet(isPresented: $showingSheet) {
                 NavigationView {
@@ -32,14 +41,32 @@ struct ContentView: View {
             .frame(width: 250, height: 30)
             .border(Color.gray)
             .padding(5)
+            
+            Text("or")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .padding(.vertical, 5)
 
-            Button(action: { }) {
-                Text("Scan QR Code")
+            Button(action: {
+                
+            }) {
+                HStack(alignment: .center, spacing: 15) {
+                   Image(systemName: "qrcode.viewfinder")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 34)
+                    .foregroundColor(.white)
+                    
+                    Text("Scan QR Code")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.white)
+                }
+                
             }
-            .foregroundColor(Color.white)
-            .frame(width: 250, height: 30)
+            .foregroundColor(Color.primary)
+            .frame(width: UIScreen.main.bounds.width - 40, height: 60)
             .background(Color.blue)
-            .border(Color.gray)
+            .cornerRadius(10)
             .padding(5)
 
             Button(action: { }) {
@@ -47,10 +74,15 @@ struct ContentView: View {
             }
             .font(.caption)
             .lineLimit(2)
-            .foregroundColor(Color.secondary)
-            .frame(width: 170)
             .multilineTextAlignment(.center)
-            .padding(.bottom, 10)
+            .foregroundColor(Color.secondary)
+            .frame(width: UIScreen.main.bounds.width - 40, height: 60)
+            .padding(.bottom, 50)
+            
+            Image("powered_by")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 40)
         }
     }
 }
