@@ -11,6 +11,7 @@ import SlideOverCard
 struct ContentView: View {
     @State private var showingProfileSheet = false
     @State private var showingQRSheet = false
+    @State private var showingDiscoverSheet = false
 
     var body: some View {
         VStack {
@@ -20,6 +21,9 @@ struct ContentView: View {
                 .padding()
                 .padding(.top, 40)
             Spacer()
+
+
+            // MARK: Create Profile Button
 
             Button(action: {
                 showingProfileSheet.toggle()
@@ -48,11 +52,38 @@ struct ContentView: View {
                     ProfileView()
                 }
             }
+
+
+            // MARK: Discover Button
+
+            Button(action: {
+                showingDiscoverSheet.toggle()
+            }) {
+                HStack(alignment: .center, spacing: 15) {
+                    Text("Discover")
+                        .fontWeight(.semibold)
+                        .foregroundColor(.primary)
+                }
+                .foregroundColor(Color.primary)
+                .frame(width: UIScreen.main.bounds.width - 40, height: 60)
+                .background(Color("buttonColor"))
+                .cornerRadius(15)
+                .padding(5)
+            }
+            .buttonStyle(MainButtonStyle())
+            .sheet(isPresented: $showingDiscoverSheet) {
+                NavigationView {
+                    DiscoverView()
+                }
+            }
             
             Text("or")
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .padding(.vertical, 2.5)
+
+
+            // MARK: QR Code Button
 
             Button(action: {
                 self.showingQRSheet.toggle()

@@ -15,6 +15,13 @@
 		05851D6026E28DC400A31B11 /* SlideOverCard in Frameworks */ = {isa = PBXBuildFile; productRef = 05851D5F26E28DC400A31B11 /* SlideOverCard */; };
 		05851D6326E28E4600A31B11 /* CarBode in Frameworks */ = {isa = PBXBuildFile; productRef = 05851D6226E28E4600A31B11 /* CarBode */; };
 		05851D6526E2936000A31B11 /* CustomStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05851D6426E2936000A31B11 /* CustomStyles.swift */; };
+		BAEBE4B926E2995D00E73DA1 /* Allergy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4B826E2995D00E73DA1 /* Allergy.swift */; };
+		BAEBE4BB26E299AD00E73DA1 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4BA26E299AD00E73DA1 /* Favorite.swift */; };
+		BAEBE4BE26E29A9D00E73DA1 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4BD26E29A9D00E73DA1 /* UITextField+Extensions.swift */; };
+		BAEBE4DB26E29E9800E73DA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4DA26E29E9800E73DA1 /* SceneDelegate.swift */; };
+		BAEBE4DD26E2A00700E73DA1 /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4DC26E2A00700E73DA1 /* DiscoverView.swift */; };
+		BAEBE4E026E2A19C00E73DA1 /* Mealgram.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4DE26E2A19C00E73DA1 /* Mealgram.xcdatamodeld */; };
+		BAEBE4E226E2A3A500E73DA1 /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEBE4E126E2A3A500E73DA1 /* UserRow.swift */; };
 		FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68B9A226E27D4700935E4B /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +34,13 @@
 		0572A5D426E279C80099789E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0572A5D626E279C80099789E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05851D6426E2936000A31B11 /* CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyles.swift; sourceTree = "<group>"; };
+		BAEBE4B826E2995D00E73DA1 /* Allergy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Allergy.swift; sourceTree = "<group>"; };
+		BAEBE4BA26E299AD00E73DA1 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		BAEBE4BD26E29A9D00E73DA1 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		BAEBE4DA26E29E9800E73DA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BAEBE4DC26E2A00700E73DA1 /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
+		BAEBE4DF26E2A19C00E73DA1 /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
+		BAEBE4E126E2A3A500E73DA1 /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
 		FA68B9A226E27D4700935E4B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,11 +76,16 @@
 		0572A5CC26E279C70099789E /* Mealagram */ = {
 			isa = PBXGroup;
 			children = (
+				BAEBE4BC26E29A8300E73DA1 /* Extensions */,
+				BAEBE4B526E298C400E73DA1 /* Models */,
 				0572A5CD26E279C70099789E /* MealagramApp.swift */,
 				0572A5CF26E279C70099789E /* ContentView.swift */,
 				FA68B9A226E27D4700935E4B /* ProfileView.swift */,
 				053DFD9926E2A56700C65353 /* ScanQRView.swift */,
 				05851D6426E2936000A31B11 /* CustomStyles.swift */,
+				BAEBE4DA26E29E9800E73DA1 /* SceneDelegate.swift */,
+				BAEBE4DC26E2A00700E73DA1 /* DiscoverView.swift */,
+				BAEBE4E126E2A3A500E73DA1 /* UserRow.swift */,
 				0572A5D126E279C80099789E /* Assets.xcassets */,
 				0572A5D626E279C80099789E /* Info.plist */,
 				0572A5D326E279C80099789E /* Preview Content */,
@@ -80,6 +99,24 @@
 				0572A5D426E279C80099789E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BAEBE4B526E298C400E73DA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAEBE4DE26E2A19C00E73DA1 /* Mealgram.xcdatamodeld */,
+				BAEBE4B826E2995D00E73DA1 /* Allergy.swift */,
+				BAEBE4BA26E299AD00E73DA1 /* Favorite.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BAEBE4BC26E29A8300E73DA1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAEBE4BD26E29A9D00E73DA1 /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +197,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				05851D6526E2936000A31B11 /* CustomStyles.swift in Sources */,
+				BAEBE4BE26E29A9D00E73DA1 /* UITextField+Extensions.swift in Sources */,
+				BAEBE4DB26E29E9800E73DA1 /* SceneDelegate.swift in Sources */,
 				0572A5D026E279C70099789E /* ContentView.swift in Sources */,
 				053DFD9A26E2A56700C65353 /* ScanQRView.swift in Sources */,
 				FA68B9A326E27D4700935E4B /* ProfileView.swift in Sources */,
+				BAEBE4BB26E299AD00E73DA1 /* Favorite.swift in Sources */,
+				BAEBE4E026E2A19C00E73DA1 /* Mealgram.xcdatamodeld in Sources */,
+				BAEBE4DD26E2A00700E73DA1 /* DiscoverView.swift in Sources */,
+				BAEBE4B926E2995D00E73DA1 /* Allergy.swift in Sources */,
+				BAEBE4E226E2A3A500E73DA1 /* UserRow.swift in Sources */,
 				0572A5CE26E279C70099789E /* MealagramApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +428,19 @@
 			productName = CarBode;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		BAEBE4DE26E2A19C00E73DA1 /* Mealgram.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BAEBE4DF26E2A19C00E73DA1 /* User.xcdatamodel */,
+			);
+			currentVersion = BAEBE4DF26E2A19C00E73DA1 /* User.xcdatamodel */;
+			path = Mealgram.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0572A5C226E279C70099789E /* Project object */;
 }
